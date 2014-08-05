@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.brandnewengine.plugins.smslog"
+        version="1.0.1">
+    
+    <name>SMS Log</name>
+    <description>tries to pull SMS count</description>
+    <license>MIT</license>
+    
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    
+    <js-module src="www/smslog.js" name="Smslog">
+        <clobbers target="cordova.plugins.smsLog" />
+    </js-module>
+   
+    <platform name="android">
+        
+        <source-file src="src/android/Smslog.java" target-dir="src/com/brandnewengine/plugins" />       
+        
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Smslog">
+                <param name="android-package" value="com.brandnewengine.plugins.Smslog" />
+            </feature>
+        </config-file>
+
+     </platform>
+
+</plugin>
+
