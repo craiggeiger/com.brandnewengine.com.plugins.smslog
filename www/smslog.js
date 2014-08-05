@@ -9,12 +9,12 @@ var SmslogLoader = function (require, exports, module) {
         exec(successFunc, failFunc, "Smslog","getSMSLog",[]);
     };
 
-    Smslog.prototype.getTexts = function (params, phoneNumber, successFunc, failFunc) {
-        exec(successFunc, failFunc, "Smslog","getTexts",[]);
+    Smslog.prototype.getTexts = function (params, successFunc, failFunc) {
+        exec(successFunc, failFunc, "Smslog","getTexts", params);
     };
 
     Smslog.prototype.getTextsAfter = function (params, successFunc, failFunc) {
-        exec(successFunc, failFunc, "Smslog","getTextsAfter",[]);
+        exec(successFunc, failFunc, "Smslog","getTextsAfter", params);
     };
     
     var smsLog = new Smslog();

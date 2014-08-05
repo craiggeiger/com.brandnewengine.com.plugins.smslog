@@ -47,8 +47,8 @@ import android.util.Log;
  */
 public class Smslog extends CordovaPlugin {
     private static final String TAG = "getSMSLog";
-    private static final String GET_TEXTS_ACTION = "GetTexts";
-    private static final String GET_TEXTS_AFTER  = "GetTextsAfter";
+    private static final String GET_TEXTS_ACTION = "getTexts";
+    private static final String GET_TEXTS_AFTER  = "getTextsAfter";
 
     // Defaults:
     private static final Integer READ_ALL = -1;
