@@ -27,6 +27,10 @@
             </feature>
         </config-file>
 
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_SMS" />
+        </config-file>
+
      </platform>
 
 </plugin>
