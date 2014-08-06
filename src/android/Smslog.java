@@ -193,8 +193,8 @@ public class Smslog extends CordovaPlugin {
 
 
 
-        // ORIG Cursor cursor = contentResolver.query(Uri.parse("content://sms/inbox"), null, "address=? AND date>=?", queryData, sortOrder);
-        Cursor cursor = contentResolver.query(Uri.parse("content://sms/inbox"), null, null, null, null);
+        Cursor cursor = contentResolver.query(Uri.parse("content://sms/inbox"), null, "date>=?", queryData, sortOrder);
+        //Cursor cursor = contentResolver.query(Uri.parse("content://sms/inbox"), null, null, null, null);
 
 
 
