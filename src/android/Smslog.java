@@ -173,7 +173,21 @@ public class Smslog extends CordovaPlugin {
     private JSONArray readTextsAfter(String numberToCheck, String timeStamp
             ) throws JSONException {
         ContentResolver contentResolver = cordova.getActivity().getContentResolver();
-        String[] queryData = new String[] { numberToCheck, timeStamp };
+        
+
+
+
+
+
+
+        //String[] queryData = new String[] { numberToCheck, timeStamp };
+        String[] queryData = new String[] { timeStamp };
+
+
+
+
+
+
 
         String sortOrder = "date DESC";
 
