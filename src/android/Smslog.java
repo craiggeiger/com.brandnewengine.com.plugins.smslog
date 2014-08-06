@@ -180,8 +180,8 @@ public class Smslog extends CordovaPlugin {
 
 
 
-        //String[] queryData = new String[] { numberToCheck, timeStamp };
-        String[] queryData = new String[] { timeStamp };
+        String[] queryData = new String[] { numberToCheck, timeStamp };
+        // NEW String[] queryData = new String[] { timeStamp };
 
 
 
@@ -191,8 +191,13 @@ public class Smslog extends CordovaPlugin {
 
         String sortOrder = "date DESC";
 
-        Cursor cursor = contentResolver.query(Uri.parse("content://sms/inbox"), null,
-            "address=? AND date>=?", queryData, sortOrder);
+
+
+        // ORIG Cursor cursor = contentResolver.query(Uri.parse("content://sms/inbox"), null, "address=? AND date>=?", queryData, sortOrder);
+        Cursor cursor = getContentResolver().query(Uri.parse("content://sms/inbox"), null, null, null, null);
+
+
+
 
         JSONArray results = new JSONArray();
         while (cursor.moveToNext()) {
